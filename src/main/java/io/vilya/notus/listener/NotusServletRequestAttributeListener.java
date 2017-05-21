@@ -18,17 +18,17 @@ public class NotusServletRequestAttributeListener implements ServletRequestAttri
     
     @Override
     public void attributeAdded(ServletRequestAttributeEvent srae) {
-        LOGGER.info("attributeAdded: " + srae.toString());
+        LOGGER.info("attributeAdded: " + srae.getValue());        
     }
 
     @Override
     public void attributeRemoved(ServletRequestAttributeEvent srae) {
-        LOGGER.info("attributeRemoved: " + srae.toString());
+        LOGGER.info("attributeRemoved: " + srae.getValue());
     }
 
     @Override
     public void attributeReplaced(ServletRequestAttributeEvent srae) {
-        LOGGER.info("attributeReplaced: " + srae.toString());
+        LOGGER.info("attributeReplaced: " + srae.getValue());
     }
 
 }
