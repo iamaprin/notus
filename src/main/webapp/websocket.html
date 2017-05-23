@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>websocket</title>
+<script type="text/javascript" src="static/js/jquery/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+
+		var websocket = new WebSocket("ws://localhost:8080/notus/chat");
+
+		websocket.onopen = function() {
+			console.log(arguments)
+		}
+
+		websocket.onmessage = function(message) {
+			console.log(message)
+		}
+
+		websocket.onclose = function() {
+			console.log(arguments)
+		}
+
+
+
+	})
+</script>
+</head>
+<body>
+    
+</body>
+</html>
