@@ -14,7 +14,7 @@ import org.slf4j.LoggerFactory;
  * @author zhukuanxin
  * @time 2017年5月23日 下午11:18:04
  */
-@ServerEndpoint("/chat")
+@ServerEndpoint(value = "/chat", configurator = NotusConfigurator.class)
 public class ChatService {
     
     private static final Logger LOGGER = LoggerFactory.getLogger(ChatService.class);
